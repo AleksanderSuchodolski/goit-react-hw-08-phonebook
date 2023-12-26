@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button, Paper, Typography, Box } from '@mui/material';
 import contact from '../photo/contact.jpg';
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn, selectUser } from '../redux/authSelector';
+import { selectIsLoggedIn, selectUser } from '../redux/auth/authSelector';
 import { boxMainStyle, paperMainStyle } from './StylePages';
 import { StyledNavLink } from '../components/Navigation/StyleNav';
 

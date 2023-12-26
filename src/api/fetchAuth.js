@@ -26,7 +26,7 @@ const postUser = async (newUser, thunkAPI) => {
 
 const postLogIn = async (logInUser, thunkAPI) => {
   try {
-    const response = await axios.post('/user/login', logInUser);
+    const response = await axios.post('/users/login', logInUser);
     setAuthHeader(response.data.token);
     return response.config.data;
   } catch (e) {

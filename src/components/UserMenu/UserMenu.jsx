@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectUser } from '../../redux/authSelector';
+import { selectUser } from '../../redux/auth/authSelector';
 import avatar from './avatar.jpg';
 import { postLogOutThunk } from '../../api/fetchAuth';
 import { Avatar, Button, Toolbar } from '@mui/material';

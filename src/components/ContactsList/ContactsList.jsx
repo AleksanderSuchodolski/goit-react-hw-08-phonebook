@@ -1,6 +1,6 @@
 import { selectFilter } from '../../redux/filterSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectPhoneBookValue } from '../../redux/phoneSelector';
+import { selectPhoneBookValue } from '../../redux/phoneBook/phoneSelector';
 import { getContactsThunk } from '../../api/fetchContacts';
 import { useEffect, useState } from 'react';
 import * as React from 'react';

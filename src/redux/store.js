@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { filterSlice } from './filterSlice';
-import { phoneBookSlice } from './phoneBookSlice';
+import { phoneBookSlice } from './phoneBook/phoneBookSlice';
 import {
   persistStore,
   FLUSH,
@@ -10,7 +10,7 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import { authPersistReducer } from './authSlice';
+import { authPersistReducer } from './auth/authSlice';
 
 const rootReducer = combineReducers({
   auth: authPersistReducer,

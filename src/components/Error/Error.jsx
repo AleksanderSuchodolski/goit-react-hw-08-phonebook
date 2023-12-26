@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { selectError } from '../../redux/phoneSelector';
+import { selectError } from '../../redux/phoneBook/phoneSelector';
 import { Box, Typography } from '@mui/material';
 import { boxErrorStyle } from './StyleError';
 

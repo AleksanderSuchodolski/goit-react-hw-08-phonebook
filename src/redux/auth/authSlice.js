@@ -6,7 +6,7 @@ import {
   postLogInThunk,
   postLogOutThunk,
   getCurrentUserThunk,
-} from '../api/fetchAuth';
+} from '../../api/fetchAuth';
 
 const authInitialState = {
   user: { name: null, email: null },

@@ -3,7 +3,7 @@ import { Layout } from 'components/Layout/Layout';
 import { getCurrentUserThunk } from '../../api/fetchAuth';
 import { lazy, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectCurrentUser } from '../../redux/authSelector';
+import { selectCurrentUser } from '../../redux/auth/authSelector';
 import { RestrictedRoute } from 'components/RestrictedRoute';
 import { PrivateRoute } from 'components/PrivateRoute';
 import { IsCurrentUserLoader } from 'components/Loader/Loader';

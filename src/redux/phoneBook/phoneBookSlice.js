@@ -3,7 +3,7 @@ import {
   delContactThunk,
   getContactsThunk,
   postContactThunk,
-} from '../api/fetchContacts';
+} from '../../api/fetchContacts';
 
 const contactInitialState = {
   items: [],

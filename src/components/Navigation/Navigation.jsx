@@ -1,7 +1,7 @@
 import { Toolbar } from '@mui/material';
 import { StyledNavLink, toolbarStyle } from 'components/Navigation/StyleNav';
 import { useSelector } from 'react-redux';
-import { selectIsLoggedIn } from '../../redux/authSelector';
+import { selectIsLoggedIn } from '../../redux/auth/authSelector';
 
 export const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
