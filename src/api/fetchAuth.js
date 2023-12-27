@@ -15,9 +15,9 @@ const clearAuthHeader = () => {
 
 const postUser = async (newUser, thunkAPI) => {
   try {
-    const response = await axios.post('/users/signup', newUser);
-    setAuthHeader(response.data.token);
-    return response.data;
+    const { data } = await axios.post('/users/signup', newUser);
+    setAuthHeader(data.token);
+    return data;
   } catch (e) {
     Notify.failure(`We're sorry, something went wrong`, options);
     return thunkAPI.rejectWithValue(e.message);
@@ -26,9 +26,9 @@ const postUser = async (newUser, thunkAPI) => {
 
 const postLogIn = async (logInUser, thunkAPI) => {
   try {
-    const response = await axios.post('/users/login', logInUser);
-    setAuthHeader(response.data.token);
-    return response.config.data;
+    const { data } = await axios.post('/users/login', logInUser);
+    setAuthHeader(data.token);
+    return data;
   } catch (e) {
     Notify.failure(`You entered an incorrect login or password`, options);
     return thunkAPI.rejectWithValue(e.message);
@@ -37,7 +37,7 @@ const postLogIn = async (logInUser, thunkAPI) => {
 
 const postLogOut = async (_, thunkAPI) => {
   try {
-    await axios.post('/user/logout');
+    await axios.post('/users/logout');
     clearAuthHeader();
   } catch (e) {
     return thunkAPI.rejectWithValue(e.message);

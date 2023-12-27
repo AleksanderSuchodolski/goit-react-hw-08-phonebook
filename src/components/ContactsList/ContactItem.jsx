@@ -13,7 +13,7 @@ import { listItemStyle } from './StyleContactsList';
 
 export const ContactItem = ({ contact }) => {
   const [load, setLoad] = useState(false);
-  const [id, name, number] = contact;
+  const { id, name, number } = contact;
   const dispatch = useDispatch();
 
   const deleteContact = contactId => {
